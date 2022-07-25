@@ -4,15 +4,6 @@ import { DataGrid, GridColDef } from '@material-ui/data-grid';
 import { supabase } from '../../services/client';
 import { MapperAnimal } from '../../util';
 
-interface IAnimalData {
-  animal: string;
-  latitude: number;
-  longitude: number;
-  mordido: boolean;
-  velocidade: number;
-  created_at: string;
-  id: number;
-}
 const columns: GridColDef[] = [
   {
     field: 'animal',
@@ -72,7 +63,6 @@ function LandingPage() {
     await setAnimals(MapperAnimal(data));
     const teste = MapperAnimal(data);
     setAnimals(teste);
-    console.log(data);
   }, []);
 
   useEffect(() => {
