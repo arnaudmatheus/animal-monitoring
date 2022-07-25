@@ -62,6 +62,7 @@ function LandingPage() {
     const { data } = await supabase.from('Dados').select('*');
     await setAnimals(MapperAnimal(data));
     const teste = MapperAnimal(data);
+    console.log(teste);
     setAnimals(teste);
   }, []);
 
