@@ -76,7 +76,7 @@ function LandingPage() {
 
   useEffect(() => {
     getInfo();
-  }, []);
+  }, [getInfo]);
 
   return (
     <div className="App">
