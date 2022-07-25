@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider } from 'styled-components';
 import LandingPage from './containers/LandingPage';
 import { defaultTheme } from './themes';
-import { ThemeProvider } from 'styled-components';
 
 function App() {
   return (

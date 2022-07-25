@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect } from 'react';
-import { supabase } from '../../services/client';
-import { useState } from 'react';
+/* eslint-disable camelcase */
+import React, { useCallback, useEffect, useState } from 'react';
 import { DataGrid, GridColDef } from '@material-ui/data-grid';
+import { supabase } from '../../services/client';
 import { MapperAnimal } from '../../util';
 
 interface IAnimalData {
@@ -64,6 +64,7 @@ const columns: GridColDef[] = [
     disableExport: true,
   },
 ];
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function LandingPage() {
   const [animals, setAnimals] = useState<any[] | null>([]);
   const getInfo = useCallback(async () => {
